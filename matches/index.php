@@ -1,11 +1,12 @@
 <?php
 error_reporting(0);
-$url = "https://cricapi.com/api/matches?apikey=3dLnjyswyINT65QW3jl8fgEyoaS2";
+require_once '../config.php';
+$url = "https://cricapi.com/api/matches?apikey=$API_KEY";
 $result = file_get_contents($url);
 $result = json_decode($result, true);
 
 
-$oldmatchurl = "https://cricapi.com/api/cricket?apikey=3dLnjyswyINT65QW3jl8fgEyoaS2";
+$oldmatchurl = "https://cricapi.com/api/cricket?apikey=$API_KEY";
 $oldresult = file_get_contents($oldmatchurl);
 $oldresult = json_decode($oldresult, true);
 

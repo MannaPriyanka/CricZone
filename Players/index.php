@@ -1,11 +1,11 @@
 <?php
 error_reporting(0);
-$apikey = "3dLnjyswyINT65QW3jl8fgEyoaS2";
+require_once '../config.php';
 $pid = "35263";
 if ($_GET['pid']) {
     $pid = $_GET['pid'];
 }
-$url = "https://cricapi.com/api/playerStats?apikey=$apikey&pid=$pid";
+$url = "https://cricapi.com/api/playerStats?apikey=$API_KEY&pid=$pid";
 $result = file_get_contents($url);
 $result = json_decode($result, true);
 

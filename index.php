@@ -55,8 +55,9 @@
     }
 </style>
 <?php
+require_once('config.php');
 
-$url = "https://cricapi.com/api/matchCalendar?apikey=3dLnjyswyINT65QW3jl8fgEyoaS2";
+$url = "https://cricapi.com/api/matchCalendar?apikey=$API_KEY";
 $result = file_get_contents($url);
 $result = json_decode($result, true);
 //echo  "<pre>";

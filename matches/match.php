@@ -1,8 +1,8 @@
 <?php
 error_reporting(0);
-$apikey = '3dLnjyswyINT65QW3jl8fgEyoaS2';
+require_once '../config.php';
 $unique_id = $_GET['id'];
-$url = "https://cricapi.com/api/fantasySummary?apikey=" . $apikey . "&unique_id=" . $unique_id;
+$url = "https://cricapi.com/api/fantasySummary?apikey=" . $API_KEY . "&unique_id=" . $unique_id;
 $result = file_get_contents($url);
 $result = json_decode($result, true);
 //echo "<pre>";

@@ -1,10 +1,10 @@
 <?php
 error_reporting(0);
-$apikey = "3dLnjyswyINT65QW3jl8fgEyoaS2";
+require_once '../config.php';
 if (isset($_POST['submit'])) {
     $name =  $_POST['search'];
     $searchname = str_replace(" ", "%20", $name);
-    $url = "https://cricapi.com/api/playerFinder?apikey=" . $apikey . "&name=" . $searchname;
+    $url = "https://cricapi.com/api/playerFinder?apikey=" . $API_KEY . "&name=" . $searchname;
     $pidresult = file_get_contents($url);
     $pidresult = json_decode($pidresult, true);
    // print_r($pidresult);
@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
                     }
                     for ($i = 0; $i < count($nameid); $i++) {
                         $pid = $nameid[$i];
-                        $url = "https://cricapi.com/api/playerStats?apikey=$apikey&pid=$pid";
+                        $url = "https://cricapi.com/api/playerStats?apikey=$API_KEY&pid=$pid";
                         $result = file_get_contents($url);
                         $result = json_decode($result, true);
                         //print_r($result);

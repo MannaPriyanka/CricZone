@@ -1,8 +1,12 @@
 <?php
-
-$url = "https://cricapi.com/api/matchCalendar?apikey=3dLnjyswyINT65QW3jl8fgEyoaS2";
+require_once 'config.php';
+$url = "https://cricapi.com/api/playerFinder?apikey=" . $API_KEY . "&name=VIRAT";
 $result = file_get_contents($url);
 $result = json_decode($result, true);
 echo  "<pre>";
+if($result["data"]["fullname"] == "VIRAT"){
+echo "find";
+}
 print_r($result);
+
 ?>
