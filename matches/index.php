@@ -52,7 +52,7 @@ $oldresult = json_decode($oldresult, true);
                     <li><a href="../Players/">Players</a></li>
                     <li><a href="../contact.html">Contact Us</a></li>
                 </ul>
-                <form class="navbar-form navbar-right" action="../Players/player.php" method="post">
+                <form class="navbar-form navbar-right" action="https://cric-zone.herokuapp.com/Players/player.php" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search any player" name="search">
                     </div>
@@ -111,7 +111,7 @@ $oldresult = json_decode($oldresult, true);
 
                                             </div>
                                             <div class="rca-col">
-                                                <button class="btn btn-info" onclick="window.location.href='match.php?id=<?php echo $newmatch['unique_id']; ?>'">View </button>
+                                                <button class="btn btn-info" onclick="window.location.href='https://cric-zone.herokuapp.com/matches/match.php?id=<?php echo $newmatch['unique_id']; ?>'">View </button>
 
                                             </div>
 
@@ -181,7 +181,7 @@ $oldresult = json_decode($oldresult, true);
 
                                             </div>
                                             <div class="rca-col">
-                                                <button class="btn btn-info" onclick="window.location.href='match.php?id=<?php echo $newmatch['unique_id']; ?>'">View </button>
+                                                <button class="btn btn-info" onclick="window.location.href='https://cric-zone.herokuapp.com/matches/match.php?id=<?php echo $newmatch['unique_id']; ?>'">View </button>
 
                                             </div>
 
@@ -219,7 +219,7 @@ $oldresult = json_decode($oldresult, true);
                                             <?php echo $oldmatch["description"]; ?>
                                         </div>
                                         <div class="rca-col">
-                                            <button class="btn btn-info" onclick="window.location.href='match.php?id=<?php echo $oldmatch['unique_id']; ?>'">View </button>
+                                            <button class="btn btn-info" onclick="window.location.href='https://cric-zone.herokuapp.com/matches/match.php?id=<?php echo $oldmatch['unique_id']; ?>'">View </button>
 
                                         </div>
                                     </div>
