@@ -4,7 +4,7 @@ require_once '../config.php';
 if (isset($_POST['submit'])) {
     $name =  $_POST['search'];
     $searchname = str_replace(" ", "%20", $name);
-    $url = "https://cricapi.com/api/playerFinder?apikey=" . 3dLnjyswyINT65QW3jl8fgEyoaS2 . "&name=" . $searchname;
+    $url = "https://cricapi.com/api/playerFinder?apikey=3dLnjyswyINT65QW3jl8fgEyoaS2&name=" . $searchname;
     $pidresult = file_get_contents($url);
     $pidresult = json_decode($pidresult, true);
    // print_r($pidresult);
