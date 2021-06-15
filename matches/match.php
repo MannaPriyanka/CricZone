@@ -2,7 +2,7 @@
 error_reporting(0);
 require_once '../config.php';
 $unique_id = $_GET['id'];
-$url = "https://cricapi.com/api/fantasySummary?apikey=" . 3dLnjyswyINT65QW3jl8fgEyoaS2 . "&unique_id=" . $unique_id;
+$url = "https://cricapi.com/api/fantasySummary?apikey=3dLnjyswyINT65QW3jl8fgEyoaS2&unique_id=" . $unique_id;
 $result = file_get_contents($url);
 $result = json_decode($result, true);
 //echo "<pre>";
