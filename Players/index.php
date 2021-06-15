@@ -5,7 +5,7 @@ $pid = "35263";
 if ($_GET['pid']) {
     $pid = $_GET['pid'];
 }
-$url = "https://cricapi.com/api/playerStats?apikey=$API_KEY&pid=$pid";
+$url = "https://cricapi.com/api/playerStats?apikey=3dLnjyswyINT65QW3jl8fgEyoaS2&pid=$pid";
 $result = file_get_contents($url);
 $result = json_decode($result, true);
 
