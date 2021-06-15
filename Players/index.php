@@ -83,7 +83,7 @@ $result = json_decode($result, true);
                     <li><a href="#">Players</a></li>
                     <li><a href="../contact.html">Contact Us</a></li>
                 </ul>
-                <form class="navbar-form navbar-right" action="player.php" method="post">
+                <form class="navbar-form navbar-right" action="https://cric-zone.herokuapp.com/Players/player.php" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search any player" name="search">
                     </div>
